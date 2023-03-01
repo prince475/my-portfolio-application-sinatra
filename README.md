@@ -6,7 +6,7 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # My-Portfolio-Application
-My-Todos is a basic API built with ruby's Sinatra DSL.
+My-Portfolio-Application is a basic API built with ruby's Sinatra DSL.
 
 This project is a demo that shows the power of the DSL in building server-side applications quickly.
 
@@ -26,7 +26,7 @@ This application has been built with the following tools:
 
 ![ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 ![sqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 
 
 - **Ruby `v2.7.+`**
@@ -36,7 +36,6 @@ This application has been built with the following tools:
 - **Puma `v6.1`**
 - **rerun `v0.14`**
 - **Sinatra `v3.0.5`**
-- **Bootstrap `v5.3.0`**
 - **ERB `v4.0`**
 
 ## Setup
