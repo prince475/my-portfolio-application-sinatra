@@ -43,7 +43,7 @@ You can setup this repository by following this manual
 
 1. Clone the repository
     ```{shell}
-   git clone https://github.com/otsembo/my-todos-sinatra.git
+   git clone https://github.com/prince475/my-portfolio-application-sinatra.git
    ```
 2. Ensure the ruby gems are setup in your machine
     ```{shell}
@@ -76,16 +76,16 @@ This application is a simple web API that allows users to:
 ### MODELS
 Database schema definitions.
 
-#### TODO
+#### PROJECT
 
-| COLUMN      | DATA TYPE                                       | DESCRIPTION                         |
-|-------------|-------------------------------------------------|-------------------------------------|
-| id          | Integer                                         | Unique identifier.                  |
-| title       | String                                          | The name of the task.               |
-| description | String                                          | A short description about the task. |
-| due         | Date                                            | The set due date for the task.      |
-| createdAt   | Date                                            | The date the task was created.      |
-| status      | ENUM `[CREATED, ONGOING, COMPLETED, CANCELLED]` | TThe status of the task.            |
+| COLUMN      | DATA TYPE                                       | DESCRIPTION                            |
+|-------------|-------------------------------------------------|----------------------------------------|
+| id          | Integer                                         | Unique identifier.                     |
+| title       | String                                          | The name of the project.               |
+| description | String                                          | A short description about the project. |
+| due         | Date                                            | The set due date for the project.      |
+| createdAt   | Date                                            | The date the project was created.      |
+| status      | ENUM `[CREATED, ONGOING, COMPLETED, CANCELLED]` | The status of the project.             |
 
 
 #### USER
@@ -120,7 +120,7 @@ Database schema definitions.
     "password": "12345678"
    }
    ```
-4. `/todos/create` - Add a new TODO item.
+4. `/project/create` - Add a new TODO item.
 
    ```{json}
    ## REQUEST BODY
@@ -130,7 +130,7 @@ Database schema definitions.
     "due": "2023-09-09"
    }
    ```
-5. `/todos` - List all TODO items.
+5. `/project` - List all TODO items.
 
    ```{json}
    ## RESPONSE SAMPLE
@@ -147,11 +147,12 @@ Database schema definitions.
     "message": "SUCCESS"
    }
    ```
-6. `/todos/update/:id` - Update an existing TODO.
-7. `/todos/delete/:id` - Delete a TODO item.
-8. `/` - Render a table of all todos using Bootstrap and ERB
+6. PUT `/project/update/:id` - Update an existing Project details based on its :id.
+7. DELETE `/project/delete/:id` - Delete a Project item based on its :id.
+8. URL:`/view/project` - Render a table of all Projects done using Bootstrap and ERB
 
-![Todo Table](screens/todo_table.png)
+![Project Table](screens/project_table.png)
+![User Table](screens/user_table.png)
 
 ## LICENSE
 This repository is distributed under the MIT License
