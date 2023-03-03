@@ -1,6 +1,7 @@
 # setting our faker details so that our db can be populated with seed dummy data
+puts "Seeding data..."
 
-17.times do
+15.times do
 
   user = User.create(
       "name": Faker::Name.name,
@@ -12,21 +13,26 @@
       "country": Faker::Address.country,
       "profession": Faker::Job.title,
       "education": Faker::Job.education_level,
-      "experience": rand(2..4)
+      "experience": rand(2..4),
+      "createdAt": rand(3..4)
+
   )
   rand(1..6).times do
       Project.create(
       "title": Faker::PhoneNumber.cell_phone ,
       "description": Faker::Lorem.sentence,
       "user_id": user.id,
-      "status": rand(0..3)
+      "status": rand(0..3),
+      "createdAt": rand(3..4)
   )
   end
 
   rand(1..5).times do
       Skill.create(
-          "name": Faker::Job.key_skill,
-          "user_id": user.id
+      "name": Faker::Job.key_skill,
+      "user_id": user.id,
+      "createdAt": rand(3..4)
+
       )
   end
 end

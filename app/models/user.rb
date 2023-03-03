@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  # our active record many to one associations
+  has_many :projects
+  has_many :skills
   # table consists of passwprd hashes as a column to store password as hashes in the db
   include BCrypt
 
