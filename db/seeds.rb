@@ -1,5 +1,12 @@
+# resetting your db
+# bundle exec rake db:reset
 # setting our faker details so that our db can be populated with seed dummy data
 puts "Seeding data..."
+# Erases previous records
+puts "Deleting old data..."
+Project.destroy_all
+User.destroy_all
+Skill.destroy_all
 
 15.times do
 
@@ -19,7 +26,7 @@ puts "Seeding data..."
   )
   rand(1..6).times do
       Project.create(
-      "title": Faker::PhoneNumber.cell_phone ,
+      "title": Faker::Marketing.buzzwords,
       "description": Faker::Lorem.sentence,
       "user_id": user.id,
       "status": rand(0..3),
@@ -36,4 +43,4 @@ puts "Seeding data..."
       )
   end
 end
-
+puts "Seeding data completed..."
