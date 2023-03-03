@@ -3,7 +3,7 @@ class CreateSkills < ActiveRecord::Migration[7.0]
     create_table :skills do |t|
       t.string :name, null: false
       t.integer :user_id, null: false
-      t.datetime :created_at, null: false
+      t.datetime :createdAt, null: false
       t.timestamps
     end
   end
