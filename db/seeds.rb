@@ -28,7 +28,6 @@ Skill.destroy_all
       Project.create(
       "title": Faker::Marketing.buzzwords,
       "description": Faker::Lorem.sentence,
-      "user_id": user.id,
       "status": rand(0..3),
       "createdAt": rand(3..4)
   )
@@ -37,7 +36,6 @@ Skill.destroy_all
   rand(1..5).times do
       Skill.create(
       "name": Faker::Job.key_skill,
-      "user_id": user.id,
       "createdAt": rand(3..4)
 
       )
