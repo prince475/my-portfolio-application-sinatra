@@ -15,11 +15,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_092445) do
     t.string "title", null: false
     t.string "description", null: false
     t.integer "status", default: 0, null: false
+    t.integer "user_id"
     t.datetime "createdAt"
   end
 
   create_table "skills", force: :cascade do |t|
     t.string "name", null: false
+    t.integer "user_id"
     t.datetime "createdAt"
   end
 
