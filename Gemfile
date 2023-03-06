@@ -1,5 +1,7 @@
 source "https://rubygems.org/"
 
+ruby '3.0.0'
+
 # ruby File.read('.ruby-version').strip
 
 gem 'sinatra', '~> 3.0', '>= 3.0.5'
@@ -20,7 +22,7 @@ gem 'puma', '~> 6.1'
 
 gem 'require_all', '~> 3.0'
 
-group :development do
+group :development, :production do
     gem 'rerun', '~> 0.14.0'
     gem 'faker'
 end

@@ -8,7 +8,7 @@ Project.destroy_all
 User.destroy_all
 Skill.destroy_all
 
-15.times do
+10.times do
 
   user = User.create(
       "name": Faker::Name.name,
